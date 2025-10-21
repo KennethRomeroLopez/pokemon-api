@@ -18,3 +18,7 @@ Web app made with **Flask** that displays basic Pokémon info via **PokéAPI**.
 
  ## 🙋‍♂️ Developed by
  Kenneth Romero as a learning project.
+
+ ## 📸 Screenshot
+
+ (static/img/pokemon_api_screenshot.png)

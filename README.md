@@ -21,4 +21,4 @@ Web app made with **Flask** that displays basic Pokémon info via **PokéAPI**.
 
  ## 📸 Screenshot
 
- (static/img/pokemon_api_screenshot.png)
+ ![screenshot](static/img/pokemon_api_screenshot.png)

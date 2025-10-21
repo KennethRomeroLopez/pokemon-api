@@ -1,0 +1,55 @@
+.navbar{
+background: #e53935;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #e35d5b, #e53935);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #e35d5b, #e53935); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.grid{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items:center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+
+.grid .card {
+    flex: 0 1 calc(20% - 1rem);
+    max-width: calc(20% - 1rem);
+    box-sizing: border-box;
+    max-width: 20%;
+    flex-grow: 0;
+    padding: 0.5rem;
+    margin-left: 1rem;
+}
+
+footer{
+    background: #e53935;
+    background: -webkit-linear-gradient(to right, #e35d5b, #e53935);
+    background: linear-gradient(to right, #e35d5b, #e53935);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+
+}
+
+html, body{
+    height: 100%;
+    margin: 0
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+

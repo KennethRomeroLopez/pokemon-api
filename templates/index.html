@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokédata</title>
+
+    <link rel="stylesheet" href="/static/styles.css">
+
+    <!-- CDN LINK -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+<main>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
+        <div class="container-fluid"><a class="navbar-brand" href="{{ url_for('home')}}">Pokedata</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+                    aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                            href="{{ url_for('home')}}">Home</a></li>
+                </ul>
+                <form action="{{ url_for('home')}}" method="post" role="search"><input class="form-control"
+                                                                                       name="search" type="search"
+                                                                                       placeholder="Search"
+                                                                                       aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- DISPLAYS SEARCH RESULT -->
+    <div class="grid">
+        {% if poke_name %}
+            <div class="card" style="width: 18rem;">
+                <img src="{{ poke_sprite }}" class="card-img-top" alt="pokemon sprite">
+                <div class="card-body">
+                    <hr>
+                    <h5 class="card-title">#{{ poke_id }} {{ poke_name }}</h5>
+                    <p class="card-text">Type: {{ poke_type }}</p>
+                </div>
+            </div>
+        {% elif search_failed %}
+            <h2>Pokémon not found</h2>
+        {% endif %}
+    </div>
+
+    <!-- DISPLAYS HOME PAGE RESULTS -->
+    <div class="grid">
+        {% for pokemon in pokemon_list %}
+        <div class="card" style="width: 18rem;">
+            <img src="{{ pokemon.sprite }}" class="card-img-top" alt="pokemon sprite">
+            <div class="card-body">
+                <hr>
+                <h5 class="card-title">#{{ pokemon.id }} {{ pokemon.name }}</h5>
+                <p class="card-text">Type: {{ pokemon.type }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+{% include "footer.html" %}
+</body>
+</html>

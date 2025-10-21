@@ -15,7 +15,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 base_url = "https://pokeapi.co/api/v2/pokemon/"
-first_gen_url = "?limit=12"
+first_gen_url = "?limit=151"
 
 current_year = datetime.now().year
 

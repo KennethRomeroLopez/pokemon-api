@@ -1,0 +1,33 @@
+# Entorn virtual
+.venv/
+venv/
+env/
+
+# Fitxers de configuració d'IDE
+.idea/
+.vscode/
+
+# Fitxers del sistema
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.DS_Store
+
+# Fitxers de proves locals o de desenvolupament
+instance/
+*.log
+
+# Fitxers de depuració
+*.swp
+*.bak
+
+# Fitxer de dependències ja generat
+# (si en tens un segon automàtic, com per exemple des de pipenv)
+Pipfile
+Pipfile.lock
+
+# Arxius temporals
+*.tmp
+*.temp
+
